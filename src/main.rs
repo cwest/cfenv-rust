@@ -10,7 +10,7 @@ fn main() {
 
     Iron::new(|_: &mut Request| {
         let instance = env::var("CF_INSTANCE_INDEX").unwrap();
-        let payload = format!("{{\"instance\": {} }}", instance);
+        let payload = format!(r#"{{"instance": {} }}"#, instance);
 
         let content_type = "application/json".parse::<Mime>().unwrap();
         Ok(Response::with((content_type, status::Ok, payload)))
