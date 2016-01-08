@@ -2,4 +2,3 @@
 applications:
 - name: cfenv-rust
   buildpack: https://github.com/cwest/heroku-buildpack-rust
-  command: target/release/cfenv-rust
