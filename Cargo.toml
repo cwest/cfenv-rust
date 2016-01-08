@@ -1,0 +1,10 @@
+[package]
+name = "cfenv-rust"
+version = "0.0.1"
+authors = ["Casey West <casey@geeknest.com>"]
+
+[dependencies]
+iron = "*"
+
+[target.heroku]
+version = "1.5.0"
